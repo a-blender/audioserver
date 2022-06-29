@@ -17,7 +17,7 @@ func main() {
 	log.Printf("Serving %s on HTTP port: %v\n", songsDir, port)
 
 	// serve and log errors
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
+	log.Fatal(http.ListenAndServeTLS(fmt.Sprintf(":%v", port), "localhost.crt", "localhost.key", nil))
 }
 
 // addHeaders will act as middleware to give us CORS support
