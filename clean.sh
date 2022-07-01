@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Clean the exported directory of non-wav files, and the processed directory of non-mp3 files.
+# Clean the exported directory of non-wav files, and the processed directory of non-mp3 files.
 
 EXPORTED_FILES=$(find ./exported -type f ! -name "*wav")
 PROCESSED_FILES=$(find ./processed -type f ! -name "*mp3")

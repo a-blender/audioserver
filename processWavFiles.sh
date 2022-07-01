@@ -46,8 +46,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     		# copy mp3 files to the server
 		echo "Copying converted mp3 files to the server..."
-		cp -r processed/* songs  
+		cp -r processed/* songs
+		echo "Done!" 
   	done
-	echo "Done!"
 
 fi

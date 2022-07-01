@@ -54,7 +54,6 @@ func loadSongsToServer(wg *sync.WaitGroup) error {
 	defer wg.Wait()
 
 	// get script that processes .wav files from Ableton Live and serves them as mp3
-
 	cmdGetSongs := &exec.Cmd{
 		Path: processWavFilesExecutablePath,
 		Args: []string{ processWavFilesExecutablePath, "version" },
