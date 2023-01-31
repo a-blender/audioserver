@@ -29,7 +29,7 @@ func runServer(wg *sync.WaitGroup) error {
 
 	// configure the songs directory name and port
 	const songsDir = "songs"
-	const port = 8080
+	const port = 8081
 
 	// add a handler for the song files
 	http.Handle("/", addHeaders(http.FileServer(http.Dir(songsDir))))
