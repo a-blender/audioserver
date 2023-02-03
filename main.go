@@ -34,7 +34,7 @@ func runServer(wg *sync.WaitGroup) error {
 	// add a handler for the song files
 	http.Handle("/", addHeaders(http.FileServer(http.Dir(songsDir))))
 	fmt.Printf("Starting server on %v\n", port)
-	log.Printf("Serving %s on HTTP port: %v\n", songsDir, port)
+	log.Printf("Serving %s on HTTPS port: %v\n", songsDir, port)
 
 	// serve and log errors on HTTPS
 	log.Fatal(http.ListenAndServeTLS(fmt.Sprintf(":%v", port), "localhost.crt", "localhost.key", nil))
